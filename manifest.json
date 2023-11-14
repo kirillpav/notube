@@ -1,21 +1,22 @@
 {
-	"manifest_version": 3,
-	"name": "NoTube",
-	"version": "1.0.1",
-	"description": "This extension recongnizes when the user is on a distracting page for more than 10 minutes. After 10 minutes, the website gets locked and the user gets redirected to a job search site, leetcode, or something else",
-	"icons": {
-		"16": "images/icon-16.png"
-	},
-
-	"content_scripts": [
-		{
-			"js": ["./scripts/content.js"],
-			"matches": [
-				"https://www.youtube.com/*",
-				"https://twitter.com/*",
-				"https://www.reddit.com/*",
-				"https://www.instagram.com/*"
-			]
-		}
-	]
+    "manifest_version": 3,
+    "name": "NoTube",
+    "version": "1.0.1",
+    "description": "This extension recongnizes when the user is on a distracting page for more than 10 minutes. After 10 minutes, the website gets locked and the user gets redirected to a job search site, leetcode, or something else",
+    "icons": {
+        "16": "images/icon-16.png"
+    },
+    "content_scripts": [
+        {
+            "js": [
+                "./scripts/content.js"
+            ],
+            "matches": [
+                "https://www.youtube.com/*",
+                "https://twitter.com/*",
+                "https://www.reddit.com/*",
+                "https://www.instagram.com/*"
+            ]
+        }
+    ]
 }
