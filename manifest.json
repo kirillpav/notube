@@ -2,12 +2,20 @@
 	"manifest_version": 3,
 	"name": "NoTube",
 	"version": "1.0.1",
+	"description": "This extension recongnizes when the user is on a distracting page for more than 10 minutes. After 10 minutes, the website gets locked and the user gets redirected to a job search site, leetcode, or something else",
 	"icons": {
-		"16": "images/icon-16.png",
-		"32": "images/icon-32.png",
-		"48": "images/icon-48.png",
-		"128": "images/icon-128.png"
+		"16": "images/icon-16.png"
 	},
 
-	"matches": ["https://www.youtube.com/*"]
+	"content_scripts": [
+		{
+			"js": ["./scripts/content.js"],
+			"matches": [
+				"https://www.youtube.com/*",
+				"https://twitter.com/*",
+				"https://www.reddit.com/*",
+				"https://www.instagram.com/*"
+			]
+		}
+	]
 }
